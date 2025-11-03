@@ -3,6 +3,7 @@ import { cexService } from '../exchanges/cex.service';
 import { dexService } from '../exchanges/dex.service';
 import { hotListService } from './hotlist.service';
 import { notificationService } from './notification.service';
+import { exchangeStatusService } from './exchange-status.service';
 import { Logger } from '../utils/logger';
 import { config, TRADE_AMOUNT_USD, DEFAULT_FEES } from '../config/config';
 
@@ -111,6 +112,11 @@ export class ArbitrageService {
     buyPrice: number,
     sellPrice: number
   ): Promise<ArbitrageOpportunity | null> {
+    // Check if token has suspended withdrawal/deposit
+    if (exchangeStatusService.shouldSkipArbitrage(buyExchange, sellExchange, symbol)) {
+      return null; // Skip this opportunity
+    }
+
     // Price difference
     const priceDifference = sellPrice - buyPrice;
     const percentageDifference = (priceDifference / buyPrice) * 100;

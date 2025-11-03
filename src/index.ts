@@ -6,6 +6,7 @@ import { hotListService } from './services/hotlist.service';
 import { arbitrageService } from './services/arbitrage.service';
 import { triangularArbitrageService } from './services/triangular.service';
 import { notificationService } from './services/notification.service';
+import { exchangeStatusService } from './services/exchange-status.service';
 
 /**
  * Main Arbitrage Bot Application
@@ -51,6 +52,9 @@ class ArbitrageBot {
 
     this.isRunning = true;
     Logger.success('🚀 Starting Arbitrage Bot...');
+
+    // Start exchange status monitoring
+    exchangeStatusService.startMonitoring();
 
     // Initial scan
     await this.performVolumeScan();
