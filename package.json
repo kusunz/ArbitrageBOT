@@ -1,0 +1,29 @@
+{
+  "name": "arbitragebot",
+  "version": "1.0.0",
+  "description": "Crypto Arbitrage Bot with Volume-Based Scanning",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "watch": "tsc -w"
+  },
+  "keywords": ["arbitrage", "crypto", "bot", "trading"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ccxt": "^4.2.25",
+    "axios": "^1.6.5",
+    "dotenv": "^16.3.1",
+    "node-telegram-bot-api": "^0.64.0",
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@types/ws": "^8.5.10",
+    "@types/node-telegram-bot-api": "^0.64.0",
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.2"
+  }
+}
