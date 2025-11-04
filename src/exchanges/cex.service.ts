@@ -20,7 +20,8 @@ export class CEXService {
    * Initialize only monitored exchanges (with status APIs)
    */
   private initializeExchanges(): void {
-    Logger.info('Initializing monitored CEX exchanges...');
+    Logger.info('Initializing monitored CEX exchanges (11 with status APIs)...');
+    Logger.debug('Excluded unmonitored exchanges: crypto.com, bitfinex, coinbase, gemini, bitstamp, phemex, bitmart, lbank, ascendex');
 
     for (const exchangeId of MONITORED_CEX) {
       try {
