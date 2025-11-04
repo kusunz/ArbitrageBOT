@@ -1,13 +1,13 @@
 # Crypto Arbitrage Bot
 
-An intelligent cryptocurrency arbitrage bot that uses volume-based scanning to detect profitable trading opportunities across 11 monitored centralized exchanges and multiple DEX chains.
+An intelligent cryptocurrency arbitrage bot that uses volume-based scanning to detect profitable trading opportunities across 10 monitored centralized exchanges and multiple DEX chains.
 
 ## Features
 
 - **Smart Volume Scanning**: Monitors top 1300 coins by market cap and identifies volume spikes
 - **Hot List Management**: Dynamically tracks 20-50 coins showing high trading activity
-- **Multi-Exchange Support**: Scans 11 major CEXs with status monitoring APIs
-- **Exchange Status Monitoring**: Auto-detects suspended deposits/withdrawals on all 11 exchanges
+- **Multi-Exchange Support**: Scans 10 major CEXs with status monitoring APIs
+- **Exchange Status Monitoring**: Auto-detects suspended deposits/withdrawals on all 10 exchanges
 - **DEX Integration**: Monitors low-gas chains (BSC, Polygon, Arbitrum, Optimism, Base, etc.)
 - **Comprehensive Fee Calculation**: Accounts for trading fees, withdrawal fees, and gas costs
 - **Simple & Triangular Arbitrage**: Detects both simple (A→B) and triangular (A→B→C→A) opportunities
@@ -131,8 +131,8 @@ Coins auto-remove after 30 minutes of inactivity.
 
 ### 4. Supported Exchanges
 
-**Monitored CEXs (11):**
-Binance, Bybit, OKX, Gate.io, KuCoin, HTX, MEXC, Bitget, Kraken, Poloniex, BingX
+**Monitored CEXs (10):**
+Binance, Bybit, OKX, Gate.io, KuCoin, HTX, MEXC, Bitget, Kraken, BingX
 
 *Note: Only exchanges with public status monitoring APIs are included. This ensures all arbitrage opportunities are actually tradeable (no suspended deposits/withdrawals).*
 
@@ -163,7 +163,7 @@ BSC, Polygon, Arbitrum, Optimism, Base, Avalanche, Fantom, Ethereum
 
 ## Exchange Status Monitoring
 
-The bot automatically monitors **11 major exchanges** for suspended deposits/withdrawals:
+The bot automatically monitors **10 major exchanges** for suspended deposits/withdrawals:
 - Binance
 - Bybit
 - OKX
@@ -173,7 +173,6 @@ The bot automatically monitors **11 major exchanges** for suspended deposits/wit
 - MEXC
 - Bitget
 - Kraken
-- Poloniex
 - BingX
 
 Checks every **5 minutes** and excludes suspended tokens from arbitrage notifications.

@@ -57,7 +57,6 @@ export class ExchangeStatusService {
       { name: 'mexc', checker: () => this.checkMEXCStatus() },
       { name: 'bitget', checker: () => this.checkBitgetStatus() },
       { name: 'kraken', checker: () => this.checkKrakenStatus() },
-      { name: 'poloniex', checker: () => this.checkPoloniexStatus() },
       { name: 'bingx', checker: () => this.checkBingXStatus() },
     ];
 

@@ -21,7 +21,7 @@ export const config: Config = {
   },
 };
 
-// CEX exchanges with status monitoring APIs (11 exchanges)
+// CEX exchanges with status monitoring APIs (10 exchanges)
 export const MONITORED_CEX = [
   'binance',
   'bybit',
@@ -32,12 +32,12 @@ export const MONITORED_CEX = [
   'mexc',
   'bitget',
   'kraken',
-  'poloniex',
   'bingx',
 ] as const;
 
 // CEX exchanges without public status APIs (excluded from arbitrage)
 export const UNMONITORED_CEX = [
+  'poloniex',
   'crypto.com',
   'bitfinex',
   'coinbase',

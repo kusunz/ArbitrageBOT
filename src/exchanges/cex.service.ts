@@ -6,7 +6,7 @@ import { MONITORED_CEX, CACHE_TTL, DEFAULT_FEES } from '../config/config';
 
 /**
  * Centralized Exchange (CEX) service using CCXT
- * Only manages exchanges with status monitoring APIs (11 exchanges)
+ * Only manages exchanges with status monitoring APIs (10 exchanges)
  */
 export class CEXService {
   private exchanges: Map<string, any> = new Map();
@@ -20,8 +20,8 @@ export class CEXService {
    * Initialize only monitored exchanges (with status APIs)
    */
   private initializeExchanges(): void {
-    Logger.info('Initializing monitored CEX exchanges (11 with status APIs)...');
-    Logger.debug('Excluded unmonitored exchanges: crypto.com, bitfinex, coinbase, gemini, bitstamp, phemex, bitmart, lbank, ascendex');
+    Logger.info('Initializing monitored CEX exchanges (10 with status APIs)...');
+    Logger.debug('Excluded unmonitored exchanges: poloniex, crypto.com, bitfinex, coinbase, gemini, bitstamp, phemex, bitmart, lbank, ascendex');
 
     for (const exchangeId of MONITORED_CEX) {
       try {
